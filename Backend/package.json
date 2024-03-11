@@ -1,0 +1,35 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "BlogifyHub is a dynamic platform where users can unleash their creativity and share their thoughts, ideas, and expertise with the world",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Shahriar.asraf@yahoo.com"
+  },
+  "keywords": [
+    "MERN",
+    "stack",
+    "Node",
+    "js",
+    "Express",
+    "js"
+  ],
+  "author": "Shahriar Asraf",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
