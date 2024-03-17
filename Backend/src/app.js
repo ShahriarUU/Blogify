@@ -16,13 +16,8 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(urlencoded({ limit: "2000kb", extended: true }));
+app.use(express.urlencoded({ limit: "2000kb", extended: true }));
 app.use(express.static("public"));
-
-//Add Routes
-app.use("/api/v1/users", (req, res) => {
-  res.send("<h1>hello</h1>");
-});
 
 //Invalid  Routes Error handles
 app.all("*", (req, res, next) => {
