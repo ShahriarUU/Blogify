@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import customError from "./utils/customError.js";
 import { globalError } from "./controllers/globalError.Controller.js";
+import userRoutes from "./routes/user.Routes.js";
 const app = express();
 
 //add middelwares
@@ -18,6 +19,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ limit: "2000kb", extended: true }));
 app.use(express.static("public"));
+
+//routes
+app.use("/api/v1/users", userRoutes);
 
 //Invalid  Routes Error handles
 app.all("*", (req, res, next) => {
